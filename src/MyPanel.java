@@ -1,18 +1,15 @@
 import javax.swing.*;
 
-public class MyPanel extends JFrame {
+public class MyPanel extends JPanel {
 
-    MyPanel panel;
+    final int PANEL_WIDTH = 500;
+    final int PANEL_HEIGHT = 500;
 
-    MyFrame(){
-
-        panel = new MyPanel();
-
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.add(panel);
-        this.pack();
-        this.setLocationRelativeTo(null);
-        this.setVisible(true);
+    MyPanel(){
 
     }
+
+
+
+
 }
