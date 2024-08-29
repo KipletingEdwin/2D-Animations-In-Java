@@ -9,6 +9,7 @@ public class MyPanel extends JPanel implements ActionListener {
     final int PANEL_HEIGHT = 500;
     Image enemy;
     Image backgroundImage;
+    Timer timer;
     int xVelocity = 1;
     int yVelocity = 1;
     int x = 0;
@@ -19,6 +20,10 @@ public class MyPanel extends JPanel implements ActionListener {
         this.setPreferredSize(new Dimension(PANEL_WIDTH, PANEL_HEIGHT));
         this.setBackground(Color.BLACK);
         enemy = new ImageIcon("enemy.png").getImage();
+        timer = new Timer(1000,null)
+    }
+
+    public  void  paint(Graphics g){
 
     }
 
