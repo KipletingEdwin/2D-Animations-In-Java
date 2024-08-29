@@ -9,6 +9,7 @@ public class MyPanel extends JFrame {
         panel = new MyPanel();
 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.add(panel);
 
     }
 }
