@@ -26,6 +26,8 @@ public class MyPanel extends JPanel implements ActionListener {
     public  void  paint(Graphics g){
         Graphics g2D = (Graphics2D) g;
 
+        g2D.drawImage(enemy,x,y,null);
+
     }
 
 
