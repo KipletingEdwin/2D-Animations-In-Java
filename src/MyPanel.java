@@ -19,11 +19,14 @@ public class MyPanel extends JPanel implements ActionListener {
     MyPanel(){
         this.setPreferredSize(new Dimension(PANEL_WIDTH, PANEL_HEIGHT));
         this.setBackground(Color.BLACK);
-        enemy = new ImageIcon("enemy.png").getImage();
-        timer = new Timer(1000,null)
+        enemy = new ImageIcon("enemy.jpg").getImage();
+        timer = new Timer(1000,null);
     }
 
     public  void  paint(Graphics g){
+
+        super.paint(g);
+
         Graphics g2D = (Graphics2D) g;
 
         g2D.drawImage(enemy,x,y,null);
