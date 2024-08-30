@@ -20,12 +20,13 @@ public class MyPanel extends JPanel implements ActionListener {
         this.setPreferredSize(new Dimension(PANEL_WIDTH, PANEL_HEIGHT));
         this.setBackground(Color.BLACK);
         enemy = new ImageIcon("enemy.jpg").getImage();
-        timer = new Timer(1000,null);
+        timer = new Timer(10,this);
+        timer.start();
     }
 
     public  void  paint(Graphics g){
 
-        super.paint(g);
+        super.paint(g);  //paint background
 
         Graphics g2D = (Graphics2D) g;
 
@@ -36,6 +37,8 @@ public class MyPanel extends JPanel implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        x = x + xVelocity;
+        repaint();
 
     }
 }
