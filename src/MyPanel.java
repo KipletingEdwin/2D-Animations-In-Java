@@ -37,6 +37,9 @@ public class MyPanel extends JPanel implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        if(x>=PANEL_WIDTH){
+            xVelocity = xVelocity * -1;
+        }
         x = x + xVelocity;
         repaint();
 
