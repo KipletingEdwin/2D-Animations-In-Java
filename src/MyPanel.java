@@ -25,23 +25,18 @@ public class MyPanel extends JPanel implements ActionListener {
     }
 
     public  void  paint(Graphics g){
-
         super.paint(g);  //paint background
-
         Graphics g2D = (Graphics2D) g;
-
         g2D.drawImage(enemy,x,y,null);
-
     }
 
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if(x>=PANEL_WIDTH){
+        if(x>=PANEL_WIDTH - enemy.getWidth(null ) || x<0){
             xVelocity = xVelocity * -1;
         }
         x = x + xVelocity;
         repaint();
-
     }
 }
